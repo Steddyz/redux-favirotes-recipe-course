@@ -1,6 +1,23 @@
 .header {
   display: flex;
   justify-content: end;
+  position: relative;
 
   padding: 5px 10px;
+}
+
+.header > span {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: #5ebfffce;
+  border-radius: 3px;
+  font-size: 11px;
+
+  width: 12px;
+  height: 12px;
+  top: 15px;
+  right: 20px;
 }
