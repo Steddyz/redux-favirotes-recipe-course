@@ -1,17 +1,19 @@
 import React, { useState } from "react";
 import { useCreateRecipeMutation } from "../../store/api/recipe.api";
 
-export default function CreateRecipe() {
-  const [recipe, setRecipe] = useState({
-    name: "",
-    image: "",
-  });
+const defaultValueRecipe = {
+  name: "",
+  image: "",
+};
 
-  const {} = useCreateRecipeMutation();
+export default function CreateRecipe() {
+  const [recipe, setRecipe] = useState(defaultValueRecipe);
+
+  const [createRecipe] = useCreateRecipeMutation();
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(recipe);
+    createRecipe(recipe).then(() => setRecipe(defaultValueRecipe));
   };
 
   return (
