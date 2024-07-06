@@ -4,5 +4,5 @@ import react from "@vitejs/plugin-react";
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
-  base: "https://Steddyz.github.io/redux-favirotes-recipe-course",
+  base: "/redux-favirotes-recipe-course/",
 });
